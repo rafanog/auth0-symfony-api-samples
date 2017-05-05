@@ -72,5 +72,5 @@ swiftmailer:
 
 jwt_auth:
     domain: {DOMAIN}
-    authorized_issuer: https://{DOMAIN}.auth0.com/
+    authorized_issuer: https://{DOMAIN}/
     api_identifier: {API_IDENTIFIER}
