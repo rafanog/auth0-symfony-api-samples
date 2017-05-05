@@ -24,9 +24,9 @@ class SecuredController extends Controller
         ));
     }
     /**
-     * @Route("/api/private", name="unsecurepingpage")
+     * @Route("/api/private", name="privatepingpage")
      */
-    public function unsecureIndexAction()
+    public function privateIndexAction()
     {
         return new JsonResponse(array(
           'message' => "Hello from a private endpoint! You need to be authenticated and have a scope of read:messages to see this."
