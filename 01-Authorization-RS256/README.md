@@ -1,8 +1,22 @@
-# Auth0 Symfony API Samples
+# Symfony Authorization for RS256-Signed Tokens
 
-These samples demonstrate how to create an API with Symfony which only permits access to resources if a valid **access token** is included. This verification is done by validating the signature and claims in a JSON Web Token (JWT) signed by Auth0.
+This sample demonstrates how to protect endpoints in a Laravel API by verifing an incoming JWT access token signed by Auth0. The token must be signed with the RS256 algorithm and must be verified against your Auth0 JSON Web Key Set.
 
-These samples do not demonstrate how to sign a JWT but rather assume that a user has already been authenticated by Auth0 and holds an access token for API access. For information on how to use Auth0 to authenticate users, see [the docs](https://auth0.com/docs).
+## Getting Started
+
+## Install the Dependencies
+
+Run `composer install`.
+
+## Configure the App with your Auth0 Domain and Audience
+
+Copy the `config.yml.example` file located in the `app/config` directory and rename it to `config.yml`. Replace `{DOMAIN}` with your Auth0 domain and `{API_IDENTIFIER}` with the identifier you have set for your API in the Auth0 dashboard.
+
+## Start the Application
+
+Run `php bin/console server:start` to start the server.
+
+The API will be served at `localhost:8080`.
 
 ## What is Auth0?
 
@@ -30,4 +44,4 @@ If you have found a bug or if you have a feature request, please report them at 
 
 ## License
 
-This project is licensed under the MIT license. See the [LICENSE](LICENSE.txt) file for more info.
+This project is licensed under the MIT license. See the `LICENSE` file for more info.
