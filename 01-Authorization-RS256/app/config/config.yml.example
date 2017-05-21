@@ -74,3 +74,4 @@ jwt_auth:
     domain: {DOMAIN}
     authorized_issuer: https://{DOMAIN}/
     api_identifier: {API_IDENTIFIER}
+    client_id: {CLIENT_ID}
