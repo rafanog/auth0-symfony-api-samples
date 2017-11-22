@@ -10,13 +10,21 @@ Run `composer install`.
 
 ## Configure the App with your Auth0 Domain and Audience
 
-Copy the `config.yml.example` file located in the `app/config` directory and rename it to `config.yml`. Replace `{DOMAIN}` with your Auth0 domain and `{API_IDENTIFIER}` with the identifier you have set for your API in the Auth0 dashboard.
+Rename `.env.example` file to `.env`. Replace `{DOMAIN}` with your Auth0 domain and `{API_IDENTIFIER}` with the identifier you have set for your API in the Auth0 dashboard.
 
 ## Start the Application
 
 Run `php bin/console server:start` to start the server.
 
-The API will be served at `localhost:8080`.
+The API will be served at [localhost:3010](http://localhost:3010).
+
+## Running the Sample With Docker
+
+In order to run the example with docker you need to have `docker` installed.
+
+You also need to set the client credentials as explained [previously](#Configure-the-app-with-your-auth0-domain-and-audience).
+
+Execute in command line `sh exec.sh` to run the Docker in Linux, or `.\exec.ps1` to run the Docker in Windows.
 
 ## What is Auth0?
 
@@ -40,7 +48,7 @@ If you have found a bug or if you have a feature request, please report them at 
 
 ## Author
 
-[Auth0](auth0.com)
+[Auth0](https://auth0.com)
 
 ## License
 
