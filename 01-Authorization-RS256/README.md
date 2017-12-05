@@ -14,7 +14,7 @@ Rename `.env.example` file to `.env`. Replace `{DOMAIN}` with your Auth0 domain 
 
 ## Start the Application
 
-Run `php bin/console server:start` to start the server.
+Run `php bin/console server:run 127.0.0.1:3010` to start the server.
 
 The API will be served at [localhost:3010](http://localhost:3010).
 
