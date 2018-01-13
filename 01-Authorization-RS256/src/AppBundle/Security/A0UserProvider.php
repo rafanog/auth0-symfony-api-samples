@@ -29,15 +29,17 @@ class A0UserProvider implements JWTUserProviderInterface
         // or from your database
         // $data = $this->auth0Service->getUserProfileByA0UID($jwt->token,$jwt->sub);
 
-        // in this case, we will just use whant we got from
+        // in this case, we will just use what we got from
         // the token because we dont need any info from the profile
         $data = [ 'sub' => $jwt->sub ];
-
-        $scopes = explode(' ', $jwt->scope);
         $roles = array();
+        $roles[] = 'ROLE_OAUTH_AUTHENTICATED';
+        if (isset($jwt->scope)) {
+          $scopes = explode(' ', $jwt->scope);
 
-        if (array_search('read:messages', $scopes) !== false) {
-          $roles[] = 'ROLE_OAUTH_READER';
+          if (array_search('read:messages', $scopes) !== false) {
+            $roles[] = 'ROLE_OAUTH_READER';
+          }
         }
 
         return new A0User($data, $roles);
