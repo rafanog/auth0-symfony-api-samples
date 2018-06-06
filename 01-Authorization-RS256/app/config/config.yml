@@ -74,3 +74,10 @@ jwt_auth:
     domain: "%env(AUTH0_DOMAIN)%"
     authorized_issuer: "https://%env(AUTH0_DOMAIN)%/"
     api_identifier: "%env(AUTH0_AUDIENCE)%"
+
+nelmio_cors:
+    defaults:
+        allow_credentials: true
+        allow_origin: ['http://localhost:3000']
+        allow_headers: ['Authorization']
+        allow_methods: ['POST', 'PUT', 'GET', 'DELETE', 'OPTIONS']
