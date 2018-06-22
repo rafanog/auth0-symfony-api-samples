@@ -10,7 +10,7 @@ Run `composer install`.
 
 ## Configure the App with your Auth0 Domain and Audience
 
-Rename `.env.example` file to `.env`. Replace `{DOMAIN}` with your Auth0 domain and `{API_IDENTIFIER}` with the identifier you have set for your API in the Auth0 dashboard.
+Rename `.env.example` file to `.env`. Replace `{AUTH0_DOMAIN}` with your Auth0 domain and `{AUTH0_AUDIENCE}` with the **Identifier** you have set for your API in the Auth0 dashboard.
 
 ## Start the Application
 
